@@ -20,7 +20,6 @@ jobs:
         run: '"/c/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" -property:Configuration=Release'
       
       - name: Upload Artifact
-        if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v2.2.1
         with:
           name: Release
@@ -39,7 +38,6 @@ jobs:
         run: '"/c/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" -property:Configuration=Release_Version'
       
       - name: Upload Artifact
-        if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v2.2.1
         with:
           name: Release_Version
@@ -57,7 +55,6 @@ jobs:
         run: '"/c/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" -property:Configuration=Debug'
       
       - name: Upload Artifact
-        if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v2.2.1
         with:
           name: Debug
@@ -76,7 +73,6 @@ jobs:
         run: '"/c/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/MSBuild/Current/Bin/MSBuild.exe" -property:Configuration=Debug_Version'
       
       - name: Upload Artifact
-        if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v2.2.1
         with:
           name: Debug_Version
